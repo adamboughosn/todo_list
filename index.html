@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>My to-do list</h1>
+      <p id="counter"></p>
+    </header>
+
+    <main>
+      <form id="task-form">
+        <label for="task-input">New task</label>
+        <div class="row">
+          <input id="task-input" name="task" required pattern=".*\S.*"
+            placeholder="e.g. Finish assignment 3">
+          <button type="submit">Add task</button>
+        </div>
+      </form>
+
+      <p class="hint">Click a task to mark it done. Click ✕ to delete it.</p>
+
+      <ul id="task-list"></ul>
+      <p id="empty">No tasks yet. Add one above to get started.</p>
+    </main>
+
+    <footer>
+      <p>Assignment 3 · Web Development</p>
+    </footer>
+
+    <!-- loaded at the end of body so every element above already exists -->
+    <script src="script.js"></script>
+  </body>
+</html>
